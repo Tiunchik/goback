@@ -12,6 +12,9 @@ import java.util.stream.Collectors;
 @Scope("singleton")
 public class StringService {
 
+    public StringService() {
+    }
+
     public List<String> sortString(String[] text) {
         return Arrays.asList(text).stream()
                 .sorted(Comparator.comparingInt(String::length).thenComparing(f -> f))
